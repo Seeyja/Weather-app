@@ -1,0 +1,15 @@
+.search-city{
+    grid-area: form;
+    place-self: center;
+    padding-left: 10px;
+    &__input{
+      width: 250px;
+      margin: 5px;
+      padding: 7px;
+      border: 1px solid #bbb7b7;
+      background-color: #fafafa;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      border-radius: 2px;
+    }
+  }
