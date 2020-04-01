@@ -40,7 +40,6 @@ class App extends Component {
         })
         .then(response => response.json())
         .then(data => {
-          console.log(data)
           const time = new Date().toLocaleString()
           this.setState(state => ({
             err: false,

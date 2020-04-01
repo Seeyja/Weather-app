@@ -9,7 +9,7 @@ Check the weather in your city
 * HTML
 * CSS(SCSS) + BEM
 * JS + React
-Layout made using CSS Grid
+* Layout made using CSS Grid
 
 ## Authors
 
