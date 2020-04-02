@@ -17,6 +17,14 @@ class App extends Component {
     pressure: '',
     wind: '',
     err: false,
+    forecast: {
+      city: '',
+      sunrise: '',
+      sunset: '',
+      temp: '',
+      pressure: '',
+      wind: '',
+    }
   }
 
   handleInputChange = e => {
@@ -52,6 +60,31 @@ class App extends Component {
           }))
         })
         .catch(err => {
+          this.setState(prevState => ({
+            err: true,
+            city: prevState.value
+          }))
+        })
+
+      const API2 = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.value}&appid=${APIKey}&units=metric`;
+      fetch(API2)
+        .then(response => {
+          if (response.ok) {
+            return response
+          }
+          throw Error("Nie udało się pobrać danych")
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data.list)
+          this.setState(prevState => ({
+            err: false,
+            forecast: {
+              temp: data.list[0].main.temp,
+            }
+          }))
+        })
+        .catch(() => {
           this.setState(prevState => ({
             err: true,
             city: prevState.value
