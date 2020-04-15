@@ -2,13 +2,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Weather app
 
-Check the weather in your city
+Check online the weather in your city.
 
 ## Build with
 
 * HTML
 * CSS(SCSS) + BEM
 * JS + React
+* AJAX(Fetch API)
 * Layout made using CSS Grid
 
 ## Authors
